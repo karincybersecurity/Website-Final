@@ -1,0 +1,89 @@
+:root { 
+  --primary: #3366cc;
+  --background: #3366cc;
+  --text: #000000;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #3366cc;
+  color: #000000;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3366cc;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  border-bottom: 3px solid #0099cc;
+}
+
+.logo {
+  color: #0099ff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #3366cc;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  background: #0099ff;
+  color: #ffffff;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .site-nav ul {
+    display: none;      /* hide menu by default */
+    flex-direction: column; /* vertical menu */
+    background: #3366cc;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .site-nav ul.show {
+    display: flex;      /* show when toggled */
+  }
+
+  .menu-btn {
+    display: block;
+    padding: 1.5rem;
+    background: #ff33cc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
